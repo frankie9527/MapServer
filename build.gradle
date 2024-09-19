@@ -23,9 +23,6 @@ configurations {
 repositories {
     mavenCentral()
     // Add other repositories if needed
-//    maven {
-//        url "https://jcenter.bintray.com/"  // or any other repository
-//    }
 }
 
 dependencies {

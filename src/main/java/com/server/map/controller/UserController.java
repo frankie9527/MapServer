@@ -12,6 +12,7 @@ import java.util.List;
 public class UserController {
     @Autowired
     private UserService userService;
+    // http://localhost:8080/registerUser
     @PostMapping("/registerUser")
     public User handleRegisterUserRequest(@RequestBody User user){
         return userService.registerUser(user);
@@ -24,7 +25,7 @@ public class UserController {
         return userService.getAllUsers();
     }
 
-    // http://localhost:8080/findUserByPhone
+    // http://localhost:8080/findUserByPhone?phone=13668232308
     @GetMapping("/findUserByPhone")
     public User getUserByPhoneNum(@RequestParam(value = "phone", defaultValue = "Frankie") String phone) {
         return userService.findUserByPhone(phone);
